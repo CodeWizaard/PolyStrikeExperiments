@@ -404,10 +404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Location 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5575663014099164663, guid: adeef0c091acc824782919f3be688ff3,
+    - target: {fileID: 7997188500628021457, guid: adeef0c091acc824782919f3be688ff3,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Name
+      value: Mose Exit Rght
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adeef0c091acc824782919f3be688ff3, type: 3}
