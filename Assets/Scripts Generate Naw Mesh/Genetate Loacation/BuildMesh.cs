@@ -9,8 +9,7 @@ public class BuildMesh : MonoBehaviour
     public NavMeshSurface surfaces;
     void Start()
     {
-        
-        Destroy(gameObject, 5f);
+       
     }
 
     private void ClearNavigationData() {

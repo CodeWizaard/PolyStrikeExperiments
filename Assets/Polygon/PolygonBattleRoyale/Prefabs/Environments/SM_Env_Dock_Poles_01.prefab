@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4306733403109544}
   - component: {fileID: 33025199977780756}
   - component: {fileID: 23786032018661274}
+  - component: {fileID: 7512366830791541758}
   m_Layer: 0
   m_Name: SM_Env_Dock_Poles_01
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7512366830791541758
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862978732126336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0534406, y: 4.0558233, z: 0.74070746}
+  m_Center: {x: 0.0062879333, y: -1.6267213, z: 0.000030517578}

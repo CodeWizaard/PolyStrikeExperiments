@@ -8,17 +8,20 @@ public class CreationTrigger: MonoBehaviour
 
     public void Start()
     {
-        Invoke("CreateStartLocation", 2f);
+        //Invoke("CreateStartLocation", 2f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") { 
+        if (other.tag == "Player") {
             m_MyEvent.Invoke();
         }
     }
     void CreateStartLocation() {
 
         m_MyEvent.Invoke();
+    }
+    private void ShutdownBoxCollider(GameObject gameObject) {
+    gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

@@ -1041,7 +1041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3d7425227f9d94f8089f8c968fcd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewLocationPrefab: {fileID: 5575663014099164667}
+  LocationPrefab:
+  - {fileID: 5575663014099164667}
   index: 2
 --- !u!114 &5575663014099164665
 MonoBehaviour:

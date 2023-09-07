@@ -10,7 +10,7 @@ public class Transport : MonoBehaviour
 
     public void Start()
     {
-        Target = GameObject.Find("First Person Controller Minimal").transform;
+        Target = GameObject.Find("Player").transform;
     }
     void Update()
     {

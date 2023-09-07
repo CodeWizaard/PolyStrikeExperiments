@@ -1,11 +1,5 @@
-using System;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
-using System.Threading;
-using Unity.Android.Gradle;
-using UnityEngine.Rendering;
-using static UnityEditor.FilePathAttribute;
+
 
 public class GenerateNewLocation : MonoBehaviour
 {
@@ -166,7 +160,7 @@ public class GenerateNewLocation : MonoBehaviour
         NewLocation.transform.rotation = SetRotation(ExitNumber);
         Vector3 EndOldLocation = GetPositionEndOldLocation(ExitNumber);
         Vector3 StartNewLocation = NewLocation.Start.localPosition;
-        Vector3 NewPos = new Vector3(EndOldLocation.x - StartNewLocation.z,
+        Vector3 NewPos = new Vector3(EndOldLocation.x + StartNewLocation.z,
                                      EndOldLocation.y - StartNewLocation.y,
                                      EndOldLocation.z - StartNewLocation.x);
         MovingLocation(NewLocation, NewPos);
@@ -220,6 +214,8 @@ public class GenerateNewLocation : MonoBehaviour
     private Location GetRandomLocation(Location[] Locations) {
         System.Random rnd = new System.Random();
         return Locations[rnd.Next(0, Locations.Length)];
+        ///UnityEngine.Random(123);
+        ///Переделать с Random range
     }
 
     private void Logging(string Text) {
