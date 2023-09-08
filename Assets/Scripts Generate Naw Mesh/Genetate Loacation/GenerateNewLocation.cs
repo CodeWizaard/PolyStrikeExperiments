@@ -149,7 +149,7 @@ public class GenerateNewLocation : MonoBehaviour
         NewLocation.transform.rotation = SetRotation(ExitNumber);
         Vector3 EndOldLocation = GetPositionEndOldLocation(ExitNumber);
         Vector3 StartNewLocation = NewLocation.Start.localPosition;
-        Vector3 NewPos = new Vector3(EndOldLocation.x + StartNewLocation.z,
+        Vector3 NewPos = new Vector3(EndOldLocation.x - StartNewLocation.z,
                                      EndOldLocation.y - StartNewLocation.y,
                                      EndOldLocation.z + StartNewLocation.x);
         MovingLocation(NewLocation, NewPos);
