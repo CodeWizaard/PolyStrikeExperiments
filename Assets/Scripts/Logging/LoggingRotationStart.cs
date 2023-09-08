@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutputRotationСonsoleStart : MonoBehaviour
+public class LoggingRotationStart : MonoBehaviour
 {
 
     void Start()
     {
+    #if UNITY_EDITOR
         RotationMeasurement(gameObject);
+    #endif
     }
     private void RotationMeasurement(GameObject Object)
     {
