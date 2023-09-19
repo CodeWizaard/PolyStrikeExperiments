@@ -1135,6 +1135,7 @@ GameObject:
   - component: {fileID: 5575663014099164665}
   - component: {fileID: 5575663014099164664}
   - component: {fileID: 987238273}
+  - component: {fileID: 3074962470741599225}
   m_Layer: 0
   m_Name: Location
   m_TagString: Untagged
@@ -1345,6 +1346,26 @@ MonoBehaviour:
   m_StartPoint: {x: 0.046783447, y: 0, z: 13.11586}
   m_EndPoint: {x: 0.10343933, y: 0, z: 14.167969}
   m_Width: 3.02
+  m_CostModifier: -1
+  m_Bidirectional: 1
+  m_AutoUpdatePosition: 0
+  m_Area: 0
+--- !u!114 &3074962470741599225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575663014099164663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 7.811142, y: 0, z: -48.565166}
+  m_EndPoint: {x: 7.802765, y: 0, z: -45.15933}
+  m_Width: 4
   m_CostModifier: -1
   m_Bidirectional: 1
   m_AutoUpdatePosition: 0

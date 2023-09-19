@@ -1,6 +1,7 @@
 using UnityEngine;
 
 
+
 public class GenerateNewLocation : MonoBehaviour
 {
     public Location[] LocationPrefab;
@@ -48,6 +49,7 @@ public class GenerateNewLocation : MonoBehaviour
                 break;
         }
     }
+
     public void InitializeLocationOnRight(int ExitNumber)
     {
         float GlobalRotationLocation = RotationMeasurement(gameObject);
@@ -75,6 +77,7 @@ public class GenerateNewLocation : MonoBehaviour
                 break;
         }
     }
+
     public void InitializeLocationBefore(int ExitNumber)
     {
         float GlobalRotationLocation = RotationMeasurement(gameObject);
@@ -104,6 +107,7 @@ public class GenerateNewLocation : MonoBehaviour
                 break;
         }
     }
+
     public void InitializeLocationBack(int ExitNumber) {
         float GlobalRotationLocation = RotationMeasurement(gameObject);
         Debug.Log(GlobalRotationLocation);
@@ -131,7 +135,6 @@ public class GenerateNewLocation : MonoBehaviour
         }
     }
 
-
     public void CreationLocationBefore(int ExitNumber) { 
         Location NewLocation = Instantiate(GetRandomLocation(LocationPrefab),transform.position,Quaternion.identity);
         NewLocation.transform.rotation = SetRotation(ExitNumber); 
@@ -143,6 +146,7 @@ public class GenerateNewLocation : MonoBehaviour
                                      EndOldLocation.z - StartNewLocation.z);
         MovingLocation(NewLocation, NewPos);
     }
+
     public void CreationLocationOnRight(int ExitNumber)
     {
         Location NewLocation = Instantiate(GetRandomLocation(LocationPrefab), transform.position, Quaternion.identity);
@@ -154,6 +158,7 @@ public class GenerateNewLocation : MonoBehaviour
                                      EndOldLocation.z + StartNewLocation.x);
         MovingLocation(NewLocation, NewPos);
     }
+
     public void CreationLocationOnLeft(int ExitNumber)
     {
         Location NewLocation = Instantiate(GetRandomLocation(LocationPrefab), transform.position, Quaternion.identity);
@@ -165,6 +170,7 @@ public class GenerateNewLocation : MonoBehaviour
                                      EndOldLocation.z - StartNewLocation.x);
         MovingLocation(NewLocation, NewPos);
     }
+
     public void CreationLocationBack(int ExitNumber)
     {
             Location NewLocation = Instantiate(GetRandomLocation(LocationPrefab), transform.position, Quaternion.identity);
@@ -177,6 +183,7 @@ public class GenerateNewLocation : MonoBehaviour
             MovingLocation(NewLocation, NewPos);
     }
 
+
     private Vector3 GetPositionEndOldLocation(int ExitNumber)
     {
        return GetComponent<Location>().End[ExitNumber].transform.position;
@@ -187,10 +194,10 @@ public class GenerateNewLocation : MonoBehaviour
     }
     private float RotationMeasurement(GameObject Object)
     {
-        
         Quaternion Q_Rotation = Object.transform.rotation;
         float Rotation = Q_Rotation.eulerAngles.y;
-        if (Rotation == 359) return 360;
+
+      
 
         if (CheckingRange(0, Rotation, 90)) return 0;
         if (CheckingRange(90, Rotation, 180)) return 90;
@@ -200,15 +207,7 @@ public class GenerateNewLocation : MonoBehaviour
     }
     private bool CheckingRange(float StartNumber, float Rotation, float EndNumber)
     {
-        if (StartNumber <= Rotation && Rotation < EndNumber)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-
+        return (StartNumber <= Rotation && Rotation < EndNumber);
     }
 
     private Location GetRandomLocation(Location[] Locations) {

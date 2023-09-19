@@ -47,7 +47,6 @@ public class EnvironmentCreator: MonoBehaviour
 
     public void Start()
     {
-
         OnAllCategory();
     }   
 
