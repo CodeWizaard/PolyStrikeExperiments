@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e17a3c932ac39438e7d9ebf7cedc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bot: {fileID: 6924117781864520225, guid: d2e113e557c2ba84cb13f0e78c2b0c36, type: 3}
+  Bot: {fileID: 6457356528462653113, guid: f39b4f45a994a8846a7269489f3f99e0, type: 3}
 --- !u!1 &2679406116060166356
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e17a3c932ac39438e7d9ebf7cedc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bot: {fileID: 6924117781864520225, guid: d2e113e557c2ba84cb13f0e78c2b0c36, type: 3}
+  Bot: {fileID: 6457356528462653113, guid: f39b4f45a994a8846a7269489f3f99e0, type: 3}
 --- !u!1 &4960760365099791181
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e17a3c932ac39438e7d9ebf7cedc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bot: {fileID: 6924117781864520225, guid: d2e113e557c2ba84cb13f0e78c2b0c36, type: 3}
+  Bot: {fileID: 6457356528462653113, guid: f39b4f45a994a8846a7269489f3f99e0, type: 3}
 --- !u!1 &5272661764056231814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.016666668
+  m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: bb25a773c82464e48ae649002e6d09e0, type: 2}
 --- !u!114 &5575663014099164667
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e17a3c932ac39438e7d9ebf7cedc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bot: {fileID: 6924117781864520225, guid: d2e113e557c2ba84cb13f0e78c2b0c36, type: 3}
+  Bot: {fileID: 6457356528462653113, guid: f39b4f45a994a8846a7269489f3f99e0, type: 3}
 --- !u!1 &7997188500628021457
 GameObject:
   m_ObjectHideFlags: 0

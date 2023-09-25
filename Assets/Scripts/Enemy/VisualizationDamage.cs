@@ -1,32 +1,26 @@
 using UnityEngine;
-using UnityEngine.TestTools;
 
 public class VisualizationDamage : MonoBehaviour
 {
 
-    [SerializeField] Material DefaultMaterial;
+    private Material MainMaterial;
     [SerializeField] Material DamageMaterial;
     private float HealthPercentages;
-    enum StateHealth { Max = 3, Average = 2, Min = 0, No = 0 };
+    private float MinThresholdTransperent;
+    public SkinnedMeshRenderer Renderer;
+    public void Awake()
+    {
+        SetMaterial();
+        SkinnedMeshRenderer Renderer = GetComponentInChildren<SkinnedMeshRenderer>();
+    }
+    private void SetMaterial()
+    {
+        
+        Renderer.materials = new Material[] {Renderer.material, DamageMaterial };   
+    }
     public void SetDamage(float HealthPercentages)
     {
-        if (HealthPercentages <= 0.3f) { SetStateDamage(StateHealth.Min); }
-        else if (HealthPercentages <= 0.7f) { SetStateDamage(StateHealth.Average); }
-      
-    }
-    private void SetStateDamage(StateHealth HP)
-    {
-        SkinnedMeshRenderer EnemyRenderer = GetComponent<SkinnedMeshRenderer>();
-        if (HP == StateHealth.Max) EnemyRenderer.materials = new Material[1] { DefaultMaterial };
-        if (HP == StateHealth.Average) EnemyRenderer.materials = new Material[2] { DefaultMaterial, DamageMaterial };
-        if (HP == StateHealth.Min) EnemyRenderer.materials = new Material[3] { DefaultMaterial, DamageMaterial, DamageMaterial };
+        Renderer.materials[1].color = new Color(1,0,0, (1- HealthPercentages)*1.2f);
     }
 
-
-
-    //SkinnedMeshRenderer EnemyRenderer = GetComponent<SkinnedMeshRenderer>();
-    //gameObject.GetComponent<SkinnedMeshRenderer>().materials= Materials;
-    // EnemyRenderer.materials = new Material[2] { DefaultMaterial, DamageMaterial };
-    //EnemyRenderer.materials.SetValue(DamageMaterial, 0);
-    //EnemyRenderer.materials[1] = DamageMaterial; 
 }

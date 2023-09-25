@@ -9,12 +9,16 @@ public class Enemy : MonoBehaviour
     public float MaxHealth = 100;
     public float MinHealth = 0;
     public VisualizationDamage Skinned;
+    public Animator Animator;
 
-
+    public void Start()
+    {
+        if (gameObject.GetComponent<Animator>()) { Animator = gameObject.GetComponent<Animator>(); }
+    }
     public void ReduceHealth(float Quantity) {
         Health -= Quantity;
-        float HealthPercentages = CalculationRemainingHealthPercentage(Health, Quantity);
-        Skinned.SetDamage(HealthPercentages);
+        float RemainingHealthPercentage = CalculationRemainingHealthPercentage(Health, Quantity);
+        gameObject.GetComponent<VisualizationDamage>().SetDamage(RemainingHealthPercentage);
 
     }
     public void AddHealth(float Quantity) {
