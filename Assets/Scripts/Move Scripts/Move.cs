@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FixedJoystick _joystick;
-    [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private FixedJoystick joystick;
+    [SerializeField] private Animator animator;
 
-    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float moveSpeed;
 
     private void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector3(_joystick.Vertical * _moveSpeed, _rigidbody.velocity.y, -_joystick.Horizontal * _moveSpeed);
+        rigidbody.velocity = new Vector3(joystick.Vertical * moveSpeed, rigidbody.velocity.y, -joystick.Horizontal * moveSpeed);
 
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+            transform.rotation = Quaternion.LookRotation(rigidbody.velocity);
         } 
     }
 }

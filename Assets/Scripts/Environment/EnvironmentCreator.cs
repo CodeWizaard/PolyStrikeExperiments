@@ -17,20 +17,20 @@ public class EnvironmentCreator: MonoBehaviour
     private EnvironmentCategory[] Categories;
 
     public void OnAllCategory() {
-        int CountCategory = Categories.Length;
-        for (int i = 0; i < CountCategory; i++)
+        int countCategory = Categories.Length;
+        for (int i = 0; i < countCategory; i++)
         {
             OnObjectsCategory(Categories[i].Objects, Categories[i].CountInclude);
         }
     }
-    public void OnObjectsCategory(GameObject[] Objects, int CountInclude)
+    public void OnObjectsCategory(GameObject[] objects, int countInclude)
     {
         int CountIncluded = 0;
-        for (int i = 0; i < Objects.Length; i++)
+        for (int i = 0; i < objects.Length; i++)
         {
-            if (CountIncluded < CountInclude)
+            if (CountIncluded < countInclude)
             {
-                RandomlyEnable(Objects[i]);
+                RandomlyEnable(objects[i]);
             }
         }
     }

@@ -356,7 +356,7 @@ MonoBehaviour:
   HealthCanvas: {fileID: 0}
   MaxHealth: 100
   MinHealth: 0
-  Skinned: {fileID: 0}
+  Skinned: {fileID: 3049228453652893487}
   Animator: {fileID: 0}
 --- !u!114 &3049228453652893487
 MonoBehaviour:
@@ -370,8 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2fc28f223bdc774db517ec05d1523b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMaterial: {fileID: 0}
-  DamageMaterial: {fileID: 2100000, guid: df09114d8da45254fa95d9cf32e06cef, type: 2}
+  damageMaterial: {fileID: 2100000, guid: df09114d8da45254fa95d9cf32e06cef, type: 2}
 --- !u!114 &3049228453652893486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d4a6391a5f823479a548927883ea3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
+  damage: 0.1
 --- !u!195 &3049228453652893474
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -419,8 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe200646e5833cb43a6b5eb493e28b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _agent: {fileID: 3049228453652893474}
-  Target: {fileID: 0}
 --- !u!1 &3049228453655689020
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.08
+    agentRadius: 0.61
     agentHeight: 1.59
-    agentSlope: 35.3
+    agentSlope: 13
     agentClimb: 0.02
     ledgeDropHeight: 2.04
     maxJumpAcrossDistance: 3.07
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.026666665
+    cellSize: 0.20333333
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -459,19 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MyEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
-        m_MethodName: ReduceHealth
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 20
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &647295093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -904,6 +892,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3049228453652893474, guid: f39b4f45a994a8846a7269489f3f99e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049228453652893474, guid: f39b4f45a994a8846a7269489f3f99e0,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049228453652893474, guid: f39b4f45a994a8846a7269489f3f99e0,
+        type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049228453652893475, guid: f39b4f45a994a8846a7269489f3f99e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049228453652893481, guid: f39b4f45a994a8846a7269489f3f99e0,
+        type: 3}
+      propertyPath: MinHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3049228453652893484, guid: f39b4f45a994a8846a7269489f3f99e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -959,11 +972,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3049228453652893486, guid: f39b4f45a994a8846a7269489f3f99e0,
-        type: 3}
-      propertyPath: Damage
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f39b4f45a994a8846a7269489f3f99e0, type: 3}
 --- !u!1001 &7273007924459205083
@@ -974,9 +982,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 821973732, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1518371533}
+    - target: {fileID: 821973732, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
       propertyPath: _joystick
       value: 
       objectReference: {fileID: 1518371533}
+    - target: {fileID: 821973732, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 821973732, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 821973734}
     - target: {fileID: 821973732, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
       propertyPath: _rigidbody
       value: 
@@ -988,6 +1008,14 @@ PrefabInstance:
     - target: {fileID: 821973733, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
       propertyPath: m_Center.y
       value: 0.9090313
+      objectReference: {fileID: 0}
+    - target: {fileID: 821973734, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 821973734, guid: 70063af7fcf35724c9823c54a1535a23, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 7269196259229852027, guid: 70063af7fcf35724c9823c54a1535a23,
         type: 3}

@@ -5,16 +5,16 @@ using UnityEngine.AI;
 
 public class Transport : MonoBehaviour
 {
-    public NavMeshAgent _agent;
-    public Transform Target;
+    private NavMeshAgent _agent;
+    private Transform target;
 
     public void Start()
     {
-        Target = GameObject.Find("Player").transform;
+        target = GameObject.Find("Player").transform;
     }
     void Update()
     {
         _agent = gameObject.GetComponent<NavMeshAgent>();
-        _agent.SetDestination(Target.position);
+        _agent.SetDestination(target.position);
     }
 }

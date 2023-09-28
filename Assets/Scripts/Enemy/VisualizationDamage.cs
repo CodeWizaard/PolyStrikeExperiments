@@ -3,24 +3,33 @@ using UnityEngine;
 public class VisualizationDamage : MonoBehaviour
 {
 
-    private Material MainMaterial;
-    [SerializeField] Material DamageMaterial;
-    private float HealthPercentages;
-    private float MinThresholdTransperent;
-    public SkinnedMeshRenderer Renderer;
+ 
+    [SerializeField] Material damageMaterial;
+    private float healthPercentages;
+    private float minThresholdTransperent;
+    private SkinnedMeshRenderer renderer;
     public void Awake()
     {
+        
+        renderer = GetComponentInChildren<SkinnedMeshRenderer>();
         SetMaterial();
-        SkinnedMeshRenderer Renderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
     private void SetMaterial()
     {
-        
-        Renderer.materials = new Material[] {Renderer.material, DamageMaterial };   
+
+        renderer.materials = new Material[] {renderer.material, damageMaterial };   
     }
-    public void SetDamage(float HealthPercentages)
+    public void SetDamage(float healthPercentages)
     {
-        Renderer.materials[1].color = new Color(1,0,0, (1- HealthPercentages)*1.2f);
+        
+        renderer.materials[1].color = new Color(1,0,0, SetLimitRangeVariable((1- healthPercentages),0,0.7f));
     }
+    
+    public float SetLimitRangeVariable(float value, float min, float max)
+    {
+        return Mathf.Clamp(value, min,max);
+
+    }
+
 
 }
