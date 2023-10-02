@@ -7,13 +7,4 @@ public class Solider : MonoBehaviour
     public float MaxHealth = 100;
     public float MinHealth = 0;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
