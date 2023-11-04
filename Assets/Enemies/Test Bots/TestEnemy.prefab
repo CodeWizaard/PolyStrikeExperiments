@@ -355,9 +355,10 @@ MonoBehaviour:
   Health: 100
   HealthCanvas: {fileID: 0}
   MaxHealth: 100
-  MinHealth: 0
-  Skinned: {fileID: 3049228453652893487}
-  Animator: {fileID: 0}
+  MinHealth: 5
+  timeDisappearanceAfterDeath: 10
+  skinned: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &3049228453652893487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,11 +394,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 3049228453652893472}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.36
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -405,7 +406,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &3049228453652893475
 MonoBehaviour:
   m_ObjectHideFlags: 0

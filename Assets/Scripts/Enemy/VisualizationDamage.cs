@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class VisualizationDamage : MonoBehaviour
 {
-
- 
     [SerializeField] Material damageMaterial;
     private float healthPercentages;
     private float minThresholdTransperent;

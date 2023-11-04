@@ -9,12 +9,18 @@ public class Transport : MonoBehaviour
     private Transform target;
 
     public void Start()
-    {
+    {   
         target = GameObject.Find("Player").transform;
+        EnemyTargetPositionUpdater.PositionUpdate += ResetPositionTarget;
     }
-    void Update()
-    {
+    void ResetPositionTarget() {
+        Debug.Log("Обновил позицию игрока");
         _agent = gameObject.GetComponent<NavMeshAgent>();
         _agent.SetDestination(target.position);
     }
+    private void OnDisable()
+    {
+        EnemyTargetPositionUpdater.PositionUpdate -= ResetPositionTarget;
+    }
+
 }
