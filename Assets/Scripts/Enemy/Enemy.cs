@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     [Header("Enemy options")]
     public float Health = 100;
     public Canvas HealthCanvas;
