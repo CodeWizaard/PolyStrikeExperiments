@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+[RequireComponent(typeof(Animator))]
 
 public class SimpleZombie: Enemy
 {
@@ -12,35 +13,34 @@ public class SimpleZombie: Enemy
 
     public void Start()
     {
-        if (gameObject.GetComponent<Animator>()) { animator = gameObject.GetComponent<Animator>(); }
+        animator = GetComponent<Animator>();
     }
     public void DealDamage(float quantity) {
-        Health -= quantity;
-        float remainingHealthPercentage = CalculationRemainingHealthPercentage(Health, quantity);
-        if (HealthIsOver(Health, MinHealth))
+        CurHealth -= quantity;
+        float remainingHealthPercentage = CalculationRemainingHealthPercentage(CurHealth, quantity);
+        if (HealthIsOver(CurHealth, MinHealth))
         {
-            
-            gameObject.GetComponent<VisualizationDamage>().SetDamage(remainingHealthPercentage);
+            GetComponent<VisualizationDamage>().SetDamage(remainingHealthPercentage);
         }
         else {
             ExecuteDeath();
         }
     }
-    private float CalculationRemainingHealthPercentage(float _health, float quantity)
+    float CalculationRemainingHealthPercentage(float _health, float quantity)
     {
         return ((_health - quantity) / MaxHealth);
     }
 
     public void AddHealth(float quantity) {
-        Health += quantity;
+        CurHealth += quantity;
     }
     private bool HealthIsOver(float _health, float _minHealth)
     {
         return _health > _minHealth;
     }
     private void ExecuteDeath() {
-        gameObject.GetComponent<Transport>().enabled = false;
-        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<SearchAndMovementTowardsTheNearestGoal>().enabled = false;
+        GetComponent<NavMeshAgent>().enabled = false;
         SetAnimation("Dying");
         Destroy(gameObject, timeDisappearanceAfterDeath);
     }
