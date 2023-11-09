@@ -36,7 +36,6 @@ public class Solider : MonoBehaviour , IHealSolider
     private void OnDestroy()
     {
         SoldiersPositions.SolidersPositionsUpdate.Invoke();
-
     }
 
 
